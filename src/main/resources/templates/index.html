@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Basvuru</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container  col-md-6 ">
+        <div>
+                <div class="card mt-3 border-primary">
+                        <div class="card-header text-center border-primary">
+                          BAYİLİK ÖN BAŞVURU FORMU
+                        </div>
+                        <div class="card-body">
+                                <form>  
+                                        <div class="form-group">
+                                            <label >AD</label>
+                                            <input type="text" class="form-control" id="inputName" placeholder="Adınız..." required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label >SOYAD</label>
+                                            <input type="text" class="form-control" id="inputSurname" placeholder="Soyadınız..."required>
+                                        </div>        
+                                        <div class="form-group">
+                                            <label>TC KİMLİK</label>
+                                            <input type="text" minlength="11" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" id="inputTCNO" placeholder="TC Numaranız..."required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4">E-POSTA</label>
+                                            <input type="email" class="form-control" id="inputEmail4" placeholder="E-posta adresiniz..."required>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress">Adres</label>
+                                          <input type="text" class="form-control" id="inputAdres" placeholder="Adresiniz..."required>
+                                        </div>
+                                        <div class="form-group">
+                                          <label>DOĞUM TARİHİ</label>
+                                          <input id="datepicker" class="col-md-12" required/>
+                                        <script>
+                                            $('#datepicker').datepicker({
+                                            uiLibrary: 'bootstrap4'
+                                            });
+                                        </script>
+                                        </div>
+                                        <div class="form-group">
+                                            <p class="text-aling">PERAKENDE TİCARETİ İLE UĞRAŞTINIZ MI?  
+                                                <label class="radio-inline ml-3"><input type="radio" name="optradio" checked>Hayır</label>
+                                                <label class="radio-inline ml-3"><input type="radio" name="optradio">Evet</label>
+                                            </p>        
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">LOKUMCU BABA’YI TERCİH ETMENİZİN SEBEBİ NEDİR?</label>
+                                        <textarea rows="col-md-6" cols="200" class="form-control" id="inputTercihSebebi" placeholder="Tercih sebebiniz..." required></textarea>
+                                        </div>
+                                        <p>HANGİ İL/İLÇE/SEMT İÇİN LOKUMCU BABA İŞLETMECİLİĞİ DÜŞÜNÜYORSUNUZ?</p>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label>İl</label>
+                                            <select id="inputsehir" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group col-md-4">
+                                            <label for="inputState">İlçe</label>
+                                            <select id="inputilce" class="form-control">
+                                              <option selected>Choose...</option>
+                                              <option>...</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group col-md-2">
+                                            <label>Semt</label>
+                                            <select id="inputsemt" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label >YATIRIM MİKTARINIZ NEDİR? (TL)</label>
+                                            <input type="number" class="form-control" id="inputYatMik" placeholder="Miktar..." onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">EKLEMEK İSTEDİKLERİNİZ:</label>
+                                            <textarea rows="col-md-6" cols="200" class="form-control" id="inputEk" placeholder="Eklemek istedikleriniz..." required></textarea>
+                                        </div> 
+                                        <button type="submit" class="btn btn-primary col-md-12">Gönder</button>
+                                </form>
+                        </div>
+                      </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
