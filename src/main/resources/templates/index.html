@@ -20,30 +20,30 @@
                           BAYİLİK ÖN BAŞVURU FORMU
                         </div>
                         <div class="card-body">
-                                <form>  
+                                <form method="post" action="/formPost">  
                                         <div class="form-group">
                                             <label >AD</label>
-                                            <input type="text" class="form-control" id="inputName" placeholder="Adınız..." required>
+                                            <input name="iName" type="text" class="form-control" id="inputName" placeholder="Adınız..." required>
                                         </div>
                                         <div class="form-group">
                                             <label >SOYAD</label>
-                                            <input type="text" class="form-control" id="inputSurname" placeholder="Soyadınız..."required>
+                                            <input name="iSurname" type="text" class="form-control" id="inputSurname" placeholder="Soyadınız..."required>
                                         </div>        
                                         <div class="form-group">
                                             <label>TC KİMLİK</label>
-                                            <input type="text" minlength="11" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" id="inputTCNO" placeholder="TC Numaranız..."required>
+                                            <input name="iTC"type="text" minlength="11" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" id="inputTCNO" placeholder="TC Numaranız..."required>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputEmail4">E-POSTA</label>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="E-posta adresiniz..."required>
+                                            <input name="iMail" type="email" class="form-control" id="inputEmail4" placeholder="E-posta adresiniz..."required>
                                         </div>
                                         <div class="form-group">
                                           <label for="inputAddress">Adres</label>
-                                          <input type="text" class="form-control" id="inputAdres" placeholder="Adresiniz..."required>
+                                          <input name="iAdres" type="text" class="form-control" id="inputAdres" placeholder="Adresiniz..."required>
                                         </div>
                                         <div class="form-group">
                                           <label>DOĞUM TARİHİ</label>
-                                          <input id="datepicker" class="col-md-12" required/>
+                                          <input name="iDate" id="datepicker" class="col-md-12" required/>
                                         <script>
                                             $('#datepicker').datepicker({
                                             uiLibrary: 'bootstrap4'
@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">LOKUMCU BABA’YI TERCİH ETMENİZİN SEBEBİ NEDİR?</label>
-                                        <textarea rows="col-md-6" cols="200" class="form-control" id="inputTercihSebebi" placeholder="Tercih sebebiniz..." required></textarea>
+                                        <textarea name="iSebep" rows="col-md-6" cols="200" class="form-control" id="inputTercihSebebi" placeholder="Tercih sebebiniz..." required></textarea>
                                         </div>
                                         <p>HANGİ İL/İLÇE/SEMT İÇİN LOKUMCU BABA İŞLETMECİLİĞİ DÜŞÜNÜYORSUNUZ?</p>
                                         <div class="form-row">
@@ -86,11 +86,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label >YATIRIM MİKTARINIZ NEDİR? (TL)</label>
-                                            <input type="number" class="form-control" id="inputYatMik" placeholder="Miktar..." onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                                            <input name="iMiktar" type="number" class="form-control" id="inputYatMik" placeholder="Miktar..." onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputAddress">EKLEMEK İSTEDİKLERİNİZ:</label>
-                                            <textarea rows="col-md-6" cols="200" class="form-control" id="inputEk" placeholder="Eklemek istedikleriniz..." required></textarea>
+                                            <textarea name="iOneri" rows="col-md-6" cols="200" class="form-control" id="inputEk" placeholder="Eklemek istedikleriniz..." required></textarea>
                                         </div> 
                                         <button type="submit" class="btn btn-primary col-md-12">Gönder</button>
                                 </form>
