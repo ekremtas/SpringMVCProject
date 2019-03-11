@@ -1,20 +1,30 @@
 package com.application.project.mkblogthymeleaf;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+
+
+
 
 @Controller
 public class GreetingController {
-    @GetMapping("/")
-    String greetingPage() {
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+    public String greetingPage() {
+		
         return "index";
     }
     @PostMapping(path = "/formPost")
-    String postData(@RequestBody String iName,@RequestBody String iSurname){
+    public String postData(@RequestParam String iName,@RequestParam String iSurname){
+    	System.out.println(iName);
+    	System.out.println(iSurname);
+    	
+    	/*System.out.println(user.getiSurname());
+    	System.out.println(user.getiTC);*/
+    	
+    	
+    	
     	return null;
     }
 }
